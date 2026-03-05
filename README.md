@@ -1,24 +1,12 @@
-# README
+# Photo Gallery
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project Rails project communicates to [Pexels][https://www.pexels.com/] via
+HTTP request with [Faraday][https://github.com/lostisland/faraday] gem.
 
-Things you may want to cover:
+The API key is handled with Rails credentials.
 
-* Ruby version
+The apps has a home page with a form that can search a gallery id, the one i use
+is 8rou4p0
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project is part of [The Odin
+Project][https://www.theodinproject.com/lessons/ruby-on-rails-pexels-api]
