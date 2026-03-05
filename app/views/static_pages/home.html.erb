@@ -1,4 +1,10 @@
 <h1>Welcome!</h1>
+<a href="https://www.pexels.com">Photos provided by Pexels</a>
+
+<a href="https://www.pexels.com">
+  <img src="https://images.pexels.com/lib/api/pexels.png" width="100"/>
+</a>
+
 
 <%= form_with url: '/', method: :get do |form| %>
     <%=form.label :id, "Add gallery id"%>
@@ -9,7 +15,10 @@
 <% if !@gallery.nil? %>
     <ul>
         <%@gallery.each do |photo|%>
+            <div>
+            <%= image_tag photo["src"]["original"], style: "width: 400px; height: 350px; object-fit: cover;" %>
             <%= link_to photo["photographer"], photo["photographer_url"]%>
+            </div>
         <%end%>
     </ul>
 <%end%>
