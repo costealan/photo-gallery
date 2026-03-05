@@ -1,0 +1,15 @@
+<h1>Welcome!</h1>
+
+<%= form_with url: '/', method: :get do |form| %>
+    <%=form.label :id, "Add gallery id"%>
+    <%= form.text_field :id%>
+    <%= form.submit "Search"%>
+<%end%>
+
+<% if !@gallery.nil? %>
+    <ul>
+        <%@gallery.each do |photo|%>
+            <%= link_to photo["photographer"], photo["photographer_url"]%>
+        <%end%>
+    </ul>
+<%end%>
